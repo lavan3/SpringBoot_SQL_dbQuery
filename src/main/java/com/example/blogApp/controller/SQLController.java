@@ -1,6 +1,6 @@
 package com.example.blogApp.controller;
 
-import com.example.blogApp.service.SQLService; // we have to import our service to access it
+import com.example.blogApp.service.SQLService; 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,10 +19,8 @@ public class SQLController {
         return sqlService.getAllBlogPosts();
     }
 
-    // Endpoint to get the top 10 most commented posts
-    @GetMapping("/comments_added")
+    @GetMapping("/commentCount")
     public List<Map<String, Object>> getCommentCount() {
         return sqlService.getCommentCount();
 
-    // the rest of your endpoints
 }}
